@@ -20,6 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // https://github.com/qmk/qmk_firmware/issues/19420#issuecomment-1372134274
 #define usb_lld_disconnect_bus(usbp) do {} while(0)
 
+// May fix unresponsive after sleep issue; https://github.com/qmk/qmk_firmware/issues/17316
+#define USB_SUSPEND_WAKEUP_DELAY 200
+
 #define MOUSEKEY_INTERVAL       20
 #define MOUSEKEY_DELAY          0
 #define MOUSEKEY_TIME_TO_MAX    60
